@@ -53,9 +53,10 @@ def llm_pipeline():
         'text2text-generation',
         model = base_model,
         tokenizer = tokenizer,
-        max_length = 256,
+        min_length = 24,
+        max_length = 512,
         do_sample = True,
-        temperature = 0.3,
+        temperature = 0.1,
         top_p= 0.95,
         device=device
     )
